@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>This is a test</title>
-  </head>
-  
-  <body>
-    <script>
-    document.write("hello world");
-    </script><br />
-  
-    <p>Do Not Click the link below</p><br />
-    <a href ="https://youtu.be/dQw4w9WgXcQ" >Please don't!</a><br />
-    <p>You've been warned!</p>
-  
-    
-  </body>
-  
-  
+   <body>
+       <video autoplay loop width="100%">
+
+    <source src="https://youtu.be/o-YBDTqX_ZU">
+<!--             type="video/mp4"> -->
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
+      <script>
+         // Change the variables below to your liking
+         const currentURL = "https://youtu.be/o-YBDTqX_ZU";
+         const pageTitle = "Loading...";
+         // End of changable variables
+         
+         function setTitle() {
+            document.title = pageTitle;
+         }
+         
+         function redirect() {
+            window.location.href = currentURL;
+         }
+         
+         function onload() {
+            setTitle();
+            redirect();
+         }
+         
+         window.onload = onload();
+       </script>
+   </body>
 </html>
